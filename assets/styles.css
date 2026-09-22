@@ -179,7 +179,8 @@ em { font-family: var(--display); font-style: italic; font-weight: 400; }
 .contact-copy > p { color: var(--muted); max-width: 40ch; }
 .contact-facts { list-style: none; padding: 0; margin: 36px 0 0; display: grid; gap: 14px; border-top: 1px solid var(--line); padding-top: 24px; }
 .contact-facts li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; }
-.contact-facts span { font: 500 12px/1.9 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.contact-facts li > span:first-child { font: 500 12px/1.9 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.contact-facts .cval { font-size: clamp(16px, 1vw, 20px); line-height: 1.7; }
 .enquiry { display: grid; grid-template-columns: 1fr; gap: 18px; background: var(--cream-2); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(22px, 3.5vw, 40px); align-content: start; }
 .field { display: grid; gap: 8px; }
 .field label { font: 500 12px/1.2 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
@@ -196,7 +197,8 @@ em { font-family: var(--display); font-style: italic; font-weight: 400; }
 .site-footer { background: var(--ink); color: var(--on-ink); padding-block: 72px calc(28px + env(safe-area-inset-bottom, 0px)); }
 .footer-inner { display: grid; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #34322d; }
 .footer-logo { width: min(260px, 70vw); height: auto; }
-.footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 28px; }
+.footer-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 28px; }
+.footer-cols p { overflow-wrap: anywhere; }
 .flabel { font: 500 12px/1.2 var(--label); letter-spacing: .16em; text-transform: uppercase; color: var(--on-ink-muted); margin-bottom: 10px; }
 .site-footer a { color: var(--cream); text-decoration: none; border-bottom: 1px solid #55524a; }
 .site-footer a:hover { border-color: var(--cream); }
@@ -240,6 +242,34 @@ em { font-family: var(--display); font-style: italic; font-weight: 400; }
   .service { min-height: 230px; border-bottom: 1px solid var(--line); }
   .service:nth-child(3n + 1) { padding-left: 0; border-left: 0; }
 }
+
+/* ---------- ceremonies (weddings & events) ---------- */
+.ceremonies { padding-block: clamp(80px, 11vw, 150px); }
+.ceremony-list { list-style: none; margin: 0; padding: 0; counter-reset: c; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); border-top: 1px solid var(--ink); }
+.ceremony-list li { counter-increment: c; padding: 26px 24px 34px 0; border-bottom: 1px solid var(--line); }
+.ceremony-list li::before { content: counter(c, decimal-leading-zero); display: block; font: 300 clamp(30px, 2.4vw, 44px)/1 var(--display); color: var(--muted); margin-bottom: 18px; }
+.ceremony-list h3 { margin-bottom: 10px; }
+.ceremony-list p { color: var(--muted); font-size: clamp(15px, .95vw, 19px); max-width: 36ch; }
+.handle { margin-top: clamp(48px, 6vw, 88px); display: grid; gap: 28px; justify-items: start; }
+.handle .eyebrow { margin: 0; }
+.handle-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.handle-list li { border: 1px solid var(--ink); border-radius: 999px; padding: 10px 18px; font-size: clamp(14px, .9vw, 17px); }
+
+/* ---------- gifting extras ---------- */
+.gift-occasions { margin-top: clamp(48px, 6vw, 88px); }
+.gift-tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.gift-tags li { border: 1px solid #4a4842; color: var(--on-ink); border-radius: 999px; padding: 10px 18px; font-size: clamp(14px, .9vw, 17px); }
+.corporate { margin-top: clamp(40px, 5vw, 72px); padding: clamp(28px, 3.5vw, 56px); border: 1px solid #3a3833; border-radius: var(--radius); display: grid; gap: 22px; align-items: center; }
+.corporate h3 { color: var(--cream); font-size: clamp(28px, 2.6vw, 48px); font-weight: 400; font-variation-settings: "SOFT" 100; }
+.corporate p { color: var(--on-ink-muted); max-width: 52ch; }
+.corporate .btn { justify-self: start; }
+@media (min-width: 1000px) { .corporate { grid-template-columns: 1fr 1.2fr auto; gap: 48px; } }
+
+/* ---------- flower origin + contact values ---------- */
+.forigin { font: 500 12px/1.9 var(--label); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.cval a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.cval a:hover { border-color: var(--ink); }
+.shop-lede a { color: var(--ink); }
 
 /* ---------- header bag ---------- */
 .bar-end { display: flex; align-items: center; gap: 6px; }

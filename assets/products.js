@@ -17,7 +17,7 @@ window.TIF_PRODUCTS = [
     blurb: 'A dried posy, a scented candle and a handwritten card in our gift box.' },
 
   { id: 'red-roses-12', collection: 'fresh', name: 'Twelve red roses', price: 899,
-    blurb: 'Long-stem Hosur roses, bought fresh this morning.' },
+    blurb: 'Long-stem red roses, fresh this morning.' },
   { id: 'seasonal-mixed', collection: 'fresh', name: 'Seasonal mixed bouquet', price: 999,
     blurb: "The best of the day's market, tied loose and wild.", img: 'assets/img/bouquet-sky-sm.webp', pos: '50% 45%' },
   { id: 'white-blush', collection: 'fresh', name: 'White & blush bouquet', price: 1199,

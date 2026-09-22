@@ -18,7 +18,7 @@
       ? `<img src="${p.img}" alt="${p.name}" loading="lazy" style="object-position:${p.pos || 'center'}">`
       : `<div class="ph ph-${p.collection}"><img src="assets/logo/flower-fullcolour.svg" alt="" loading="lazy"><span>Photo coming soon</span></div>`;
     return `<article class="product" data-collection="${p.collection}">
-      <div class="p-media">${media}<span class="p-tag">${p.collection === 'forever' ? 'Ships across India' : 'Hosur & Bengaluru'}</span></div>
+      <div class="p-media">${media}<span class="p-tag">${p.collection === 'forever' ? 'Ships across India' : 'Same-day, local'}</span></div>
       <div class="p-body">
         <h3>${p.name}</h3>
         <p>${p.blurb}</p>
