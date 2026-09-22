@@ -358,3 +358,21 @@ em { font-family: var(--display); font-style: italic; font-weight: 400; }
 .canopy-points li { padding-left: 22px; position: relative; max-width: 46ch; }
 .canopy-points li::before { content: ""; position: absolute; left: 0; top: .65em; width: 8px; height: 8px; border-radius: 50%; background: var(--pink); }
 @media (min-width: 900px) { .canopy { grid-template-columns: 1.35fr 1fr; } }
+
+/* ---------- our work gallery ---------- */
+.work { padding-block: clamp(40px, 6vw, 90px) clamp(80px, 11vw, 150px); }
+.work-group { display: grid; gap: clamp(24px, 3vw, 48px); padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--ink); }
+.work-group + .work-group { margin-top: clamp(56px, 7vw, 110px); }
+.work-intro h3 { font-size: clamp(28px, 2.4vw, 44px); margin-bottom: 14px; }
+.work-intro p { color: var(--muted); max-width: 44ch; }
+.work-intro a { color: var(--ink); }
+.gallery { columns: 2 220px; column-gap: clamp(12px, 1.4vw, 24px); }
+.work-item { break-inside: avoid; margin: 0 0 clamp(12px, 1.4vw, 24px); }
+.work-item img { width: 100%; height: auto; border-radius: var(--radius); }
+.work-item figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+.work-item .credit { font-style: italic; }
+@media (min-width: 900px) {
+  .work-group { grid-template-columns: minmax(240px, 1fr) 3fr; align-items: start; }
+  .work-intro { position: sticky; top: 110px; }
+  .gallery { columns: 3; }
+}
