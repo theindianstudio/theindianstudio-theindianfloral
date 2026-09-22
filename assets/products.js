@@ -20,8 +20,8 @@ window.TIF_PRODUCTS = [
     blurb: 'Long-stem red roses, fresh this morning.' },
   { id: 'seasonal-mixed', collection: 'fresh', name: 'Seasonal mixed bouquet', price: 999,
     blurb: "The best of the day's market, tied loose and wild.", img: 'assets/img/bouquet-sky-sm.webp', pos: '50% 45%' },
-  { id: 'white-blush', collection: 'fresh', name: 'White & blush bouquet', price: 1199,
-    blurb: 'Roses, stock and lisianthus in soft whites. Perfect for bridesmaids.', img: 'assets/img/bouquets-circle-lg.webp', pos: '35% 50%' },
+  { id: 'white-blush', collection: 'fresh', name: 'Blush rose bouquet', price: 1199,
+    blurb: 'Blush and peach roses with eucalyptus. Perfect for brides and bridesmaids.', img: 'assets/img/work/bouquet-blush-saree.webp', pos: '50% 40%' },
   { id: 'sunflower-sunshine', collection: 'fresh', name: 'Sunflower sunshine', price: 1199,
     blurb: "Sunflowers and baby's breath. Instant good mood.", img: 'assets/img/hero-sunflower-bouquet-sm.webp', pos: '48% 62%' },
 ];
